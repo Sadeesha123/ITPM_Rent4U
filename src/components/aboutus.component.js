@@ -1,0 +1,15 @@
+import React, {Component} from 'react';
+
+
+
+export default class AboutUs extends Component{
+
+    render(){
+        return(
+        <div>
+            Welcome to AboutUs Component
+        </div>
+        )
+    }
+
+}

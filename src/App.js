@@ -28,7 +28,6 @@ class App extends Component{
               </nav><br/>
             <h2>Welcome to Rent4U</h2><br/>
               <Routes>
-                
                 <Route path='/carlist' element={<CarList/>} />
                 <Route path='/aboutus' element={<AboutUs/>} />
                 <Route path='/admin' element={<Admin/>} />
@@ -41,7 +40,7 @@ class App extends Component{
 
   }
 }
-
+// this commit was added on the feature/customer-profile branch
 export default App;
 
 

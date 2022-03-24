@@ -1,15 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
+function Admin(){
+    return <div>
 
-export default class Admin extends Component{
-
-    render(){
-        return(
-        <div>
-            Welcome to Admin Component
-        </div>
-        )
-    }
-
+        <h1>Admin page</h1>
+    </div>;
 }
+
+
+
+
+
+
+
+export default Admin;

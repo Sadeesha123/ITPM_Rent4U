@@ -1,15 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
+function CarList(){
+    return <div>
 
-export default class CarList extends Component{
-
-    render(){
-        return(
-        <div>
-            Welcome to CarList Component
-        </div>
-        )
-    }
-
+        <h1>CarList page</h1>
+    </div>;
 }
+
+
+
+
+
+
+
+export default CarList;

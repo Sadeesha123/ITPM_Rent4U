@@ -1,15 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
+function Index(){
+    return <div>
 
-export default class Index extends Component{
-
-    render(){
-        return(
-        <div>
-            Welcome to index Component
-        </div>
-        )
-    }
-
+        <h1>Home page</h1>
+    </div>;
 }
+
+
+
+
+
+
+
+export default Index;

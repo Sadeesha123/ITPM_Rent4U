@@ -6,6 +6,8 @@ import CarList from './components/carlist.component';
 import Gallary from './components/gallary.component';
 import Index from './components/index.component';
 import Navbar from './components/Navbar';
+import Homepage from './pages/Homepage';
+import Slider from './pages/Slider';
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
      
 <Navbar />
    <Routes>
-    <Route path="/" element={<Index/>}/>
+    <Route path="/" element={<Homepage/>}/>
     <Route path="/carlist" element={<CarList/>}/>
     <Route path="/aboutus" element={<AboutUs/>}/>
     <Route path="/gallary" element={<Gallary/>}/>

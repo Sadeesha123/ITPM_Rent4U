@@ -1,15 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
+function AboutUs(){
+    return <div>
 
-export default class AboutUs extends Component{
-
-    render(){
-        return(
-        <div>
-            Welcome to AboutUs Component
-        </div>
-        )
-    }
-
+        <h1>AboutUs page</h1>
+    </div>;
 }
+
+
+
+
+
+
+
+export default AboutUs;

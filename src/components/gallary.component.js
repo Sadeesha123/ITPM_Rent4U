@@ -1,15 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
+function Gallary(){
+    return <div>
 
-export default class Gallary extends Component{
-
-    render(){
-        return(
-        <div>
-            Welcome to Gallary Component
-        </div>
-        )
-    }
-
+        <h1>Gallary page</h1>
+    </div>;
 }
+
+
+
+
+
+
+
+export default Gallary;

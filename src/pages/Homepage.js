@@ -64,6 +64,9 @@ class Homepage extends React.Component {
  </th>
  </tr>
  </table> </div> <br/><br/><br/><br/><br/>
+ <h2 className="head3"> DISCOVER SOME CARS</h2><br/>
+<Link to=""><button className="dcar"><img src={dcar} className="dcar" /></button></Link>
+<br/><br/>
 
 
 

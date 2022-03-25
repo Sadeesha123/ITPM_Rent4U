@@ -1,22 +1,26 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import navi from '../images/navi.jpg';
+
 
 
 function Navbar(){
-    return <div className='navbar'>
-        <h1>Rent4U</h1>
-
-        <div className='navlink'>
+    return <div className='navbar1'><div className='navbar'>
+          <img src={navi} />
+        
+        <div className='navlink' >
+            
         <NavLink activeClassName="active" className="link" to="/" >Home</NavLink>
         <NavLink activeClassName="active" className="link" to="/carlist" >CarList</NavLink>
         <NavLink activeClassName="active" className="link" to="/gallary" >Gallary</NavLink>
         <NavLink activeClassName="active" className="link" to="/aboutus" >AboutUs</NavLink>
-        <NavLink activeClassName="active" className="link" to="/aboutus" >Login</NavLink>
-        <NavLink activeClassName="active" className="link" to="/aboutus" >SignUp</NavLink>
-        <NavLink activeClassName="active" className="link" to="/admin" >Admin</NavLink>
+        <NavLink activeClassName="active" className="link" to="/admin" >Admin</NavLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <NavLink activeClassName="active" className="link" to="/aboutus" ><button className='lb'> Login </button>  </NavLink>
+        <NavLink activeClassName="active" className="link" to="/aboutus" ><button className='lb'>SignUp</button></NavLink>
+        
         </div>
 
-    </div>;
+  </div>  </div>;
 }
 
 

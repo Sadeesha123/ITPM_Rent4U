@@ -9,7 +9,7 @@ import service from '../images/service.png';
 import Slider from "./Slider";
 import dcar from '../images/dcar.jpg';
 
-import Verline from "../images/VerLine.png";
+
 import Cont from "../images/cont.png";
 import printerest from "../images/printerest.png";
 import Gle from "../images/gle.png";

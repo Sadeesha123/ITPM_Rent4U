@@ -18,12 +18,11 @@
 
 .view{
     display: inline-block;
-    padding: 5px 5px;
     cursor: pointer;
     text-align: center;  
     background-color: #f0a210;
     border-radius: 5px;
-    height: 30%;
+    height: 135%;
    
     }
     
@@ -39,9 +38,16 @@
         padding: 75px 65px;
     }
     .f1{
-        background-color: #eca710;
+        margin-left: 5%;
       
     }
+    .ki{
+        border: #241b1b;
+    }
+    .ki:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
     
      .xy{
         width: 88%;

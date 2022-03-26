@@ -18,7 +18,7 @@ class Login extends React.Component {
         </div>
         <body className=" body1">
 
-			<br/><br/><br/><br/>
+			<br/><br/><br/>
          
         <div class="login-wrap">
 	<div class="login-html">

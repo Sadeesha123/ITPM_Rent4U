@@ -13,15 +13,20 @@ import Login from './pages/Login';
 function App() {
   return (
     <div className="App">
+
+
      
 <Navbar />
+
    <Routes>
     <Route path="/" element={<Homepage/>}/>
     <Route path="/carlist" element={<CarList/>}/>
     <Route path="/aboutus" element={<AboutUs/>}/>
     <Route path="/gallary" element={<Gallary/>}/>
-    <Route path="/admin" element={<Admin/>}/>   
+
+    <Route path="/admin" element={<Admin/>}/>  
     <Route path="/Login" element={<Login/>}/>
+
    </Routes>
     </div>
   );

@@ -49,30 +49,22 @@ class Homepage extends React.Component {
  and a highly personalised service to all our customers who are on 
  the lookout for Sri Lanka car rental opportunities,<br/>
   With one of the largest and most  modern and varied fleets in Sri Lanka, our service is backed by a networked front office,<br/>
- fully-fledged mechanical servicing and valet servicing onsite.</p>
- <Link to="/details">       <button className="details">More details</button></Link> 
+ fully-fledged mechanical servicing and valet servicing onsite.</p> 
+ <Link to="/details">    <br/>   <button className="details">More details</button></Link> 
  </th> <th><img src={car1} /></th>
  </tr>
  </table>  
-
+ <br/><br/><br/>
 
           
           <div className="f1">
-          <table >
-      <tr>
-        <th>     
+            <div >
+          <img src={service} />
+          <Link to=""> <img src={car3x} className="ki"/></Link>
+          <Link to=""><img src={car4} className="ki"/></Link>
+          <Link to=""><img src={car2} className="ki"/></Link>
 
-<th>        <img src={service} /></th>
-</th>
- <th><Link to="/tour">       <button className="view"> <img src={car2} /></button></Link></th>
- <th>
- <Link to="/wed">       <button className="view"> <img src={car3x} /></button></Link>
- </th>
- <th>
- <Link to="/drive">       <button className="view"> <img src={car4} /></button></Link>
- </th>
- </tr>
- </table> </div> <br/><br/><br/><br/><br/>
+        </div>   </div> <br/><br/><br/><br/><br/>
  <h2 className="head3"> DISCOVER SOME CARS</h2><br/>
 <Link to=""><button className="dcar"><img src={dcar} className="dcar" /></button></Link>
 

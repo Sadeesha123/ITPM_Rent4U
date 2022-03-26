@@ -12,14 +12,18 @@ import Slider from './pages/Slider';
 function App() {
   return (
     <div className="App">
+
+
      
 <Navbar />
+
    <Routes>
     <Route path="/" element={<Homepage/>}/>
     <Route path="/carlist" element={<CarList/>}/>
     <Route path="/aboutus" element={<AboutUs/>}/>
     <Route path="/gallary" element={<Gallary/>}/>
-    <Route path="/admin" element={<Admin/>}/>   
+    <Route path="/admin" element={<Admin/>}/> 
+    
    </Routes>
     </div>
   );

@@ -9,6 +9,8 @@ import Navbar from './components/Navbar';
 import Homepage from './pages/Homepage';
 import Slider from './pages/Slider';
 import Login from './pages/Login';
+import Carmanagement from './components/carmanagement.component';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

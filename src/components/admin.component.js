@@ -25,7 +25,7 @@ function Admin(){
   
   <InputContainer>
           <Input type="text" placeholder="Email Address" />
-          <Input type="password" placeholder="Password" />
+          <Input type="password" placeholder="Password hhhhhh" />
         </InputContainer>
   
         <ButtonContainer>

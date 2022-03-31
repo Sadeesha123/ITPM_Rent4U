@@ -71,9 +71,9 @@ class Homepage extends React.Component {
 
 
 
-       <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>  </body>
+       <br/> <br/> <br/> <br/> <br/> <br/> <br/>  </body>
 
-        <div className="footer">
+       <br/> <br/> <br/> <br/> <br/>  <div className="footer">
  
         <div className="block1">
     

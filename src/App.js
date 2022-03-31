@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import Homepage from './pages/Homepage';
 import Slider from './pages/Slider';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
     <Route path="/gallary" element={<Gallary/>}/>
     <Route path="/admin" element={<Admin/>}/>   
     <Route path="/Login" element={<Login/>}/>
+    <Route path="/Register" element={<Register/>}/>
    </Routes>
     </div>
   );

@@ -7,7 +7,10 @@ import '../styles/adminLogin.css';
 
 function Admin(){
     return <div>
+       
         <body className="bodyb">
+
+       
     <style type="text/css" >
         { `.navlink {display:none}` }
     </style>
@@ -25,7 +28,7 @@ function Admin(){
   
   <InputContainer>
           <Input type="text" placeholder="Email Address" />
-          <Input type="password" placeholder="Password hhhhhh" />
+          <Input type="password" placeholder="Password" />
         </InputContainer>
   
         <ButtonContainer>
@@ -48,11 +51,11 @@ const MainContainer = styled.div`
 display: flex;
 align-items: center;
 flex-direction: column;
-height: 60vh;
+height: 80vh;
 width: 30vw;
 background: rgba(255, 255, 255, 0.15);
 box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-backdrop-filter: blur(8.5px);
+backdrop-filter: blur(7px);
 -webkit-backdrop-filter: blur(8.5px);
 border-radius: 10px;
 color: #B8390E;
@@ -73,7 +76,7 @@ flex-direction: column;
 justify-content: space-around;
 align-items: center;
 height: 30%;
-width: 100%;
+width: 200%;
 `;
 
 const ButtonContainer = styled.div`

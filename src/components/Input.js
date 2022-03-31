@@ -12,17 +12,20 @@ const StyledInput = styled.input`
   padding: 1rem;
   border: none;
   outline: none;
-  color: #e99f4e;
+  color: black;
   font-size: 1rem;
   font-weight: bold;
+
   &:focus {
     display: inline-block;
     box-shadow: 0 0 0 0.2rem #e99f4e;
-    backdrop-filter: blur(12rem);
+    backdrop-filter: blur(12px);
     border-radius: 2rem;
+    backdrop-filter: opacity(20%);
   }
+
   &::placeholder {
-    color:#DCDCDC	;
+    color:black	;
     font-weight: 100;
     font-size: 1rem;
   }

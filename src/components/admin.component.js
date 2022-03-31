@@ -61,6 +61,8 @@ border-radius: 10px;
 color: #B8390E;
 text-transform: uppercase;
 letter-spacing: 0.3rem;
+font-weight: bold;
+
 `;
 
 

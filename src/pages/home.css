@@ -99,7 +99,7 @@
     text-align: center;  
     background-color: #f0a210;
     transition: transform 3s;
-    perspective: 30%px;
+    perspective: 30%;
 
 }
 .img:hover{

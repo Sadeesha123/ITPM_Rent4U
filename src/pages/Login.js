@@ -52,9 +52,10 @@ function Login() {
   
 	return (
 
-	  <div className="container">
+	  <div>
 	
 	<body className="zt">
+	<br/><br/>
 		<form onSubmit={handleSubmit}>
 		  
 		  <div className="login-wrap">
@@ -63,7 +64,7 @@ function Login() {
 		  <h1 className="hw1">Login Form</h1>
 
 			<p>{formErrors.username}</p>
-			<div className="group"><br/>
+			<div className="group">
 			  <label className="l1">Email        </label>&nbsp;&nbsp;
 			  <input type="text" class="label" name="email" placeholder="Email" value={formValues.email} onChange={handleChange} />
 			</div>

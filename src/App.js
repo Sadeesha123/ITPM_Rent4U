@@ -13,6 +13,7 @@ import Carmanagement from './components/carmanagement.component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Dashboard from "./pages/Dashboard";
+import Register from './pages/Register';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
     <Route path="/gallary" element={<Gallary/>}/>
     <Route path="/admin" element={<Admin/>}/>  
     <Route path="/Login" element={<Login/>}/>
+    <Route path="/Register" element={<Register/>}/>
     
     <Route path="/Dashboard" element={<Dashboard/>}/> 
    </Routes>

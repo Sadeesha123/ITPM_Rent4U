@@ -1,6 +1,4 @@
-.body{
-	background-color: #04AA6D;
-}
+
 
 .login-wrap{
 	width:100%;
@@ -211,22 +209,57 @@
 
 
 
-.body{
-    background-color: #080710;
+.bb{
+    background-image: url("../images/reg.jpg");
+	background-size: cover;
+
 }
-.background{
-    width: 430px;
-    height: 520px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
+.create{
+	width: 40%;
+	height: 70%;
+	background-color: #fb9701;
+	margin-left: 25%;
+	opacity: 0.85;
 }
-.background .shape{
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
+.h0{
+	font-size: larger;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: 800;
+	font-style: oblique;
+	margin-left: 38%;
+}
+.ho{
+	font-size: larger;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: 800;
+	font-style: oblique;
+	margin-left: 22%;
+}
+.field{
+	margin-left: 13%;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 22px;
+	border-radius: 7px solid black;
+}
+.input{
+	background-color: #d7cebb;
+	width: 60%;
+	border-radius: 7px;
+	border: #000;
+}
+.field
+    .input{
+	
+	background-color: #d7cebb;
+	width: 60%;
+	height: 53px;
+	border-radius: 7px solid black;
+
+}
+.para{
+	font-size: 22px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
 }
 .shape:first-child{
     background: linear-gradient(
@@ -253,14 +286,6 @@
     height: 40%;
     margin-left: 33%;
 }
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-  
-}
-
-/* Full-width input fields */
 input[type=text], input[type=password] {
   width: 30%;
   padding: 15px;
@@ -275,26 +300,29 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
-/* Overwrite default styles of hr */
+
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
 
-/* Set a style for the submit/register button */
+
 .registerbtn {
-  background-color: #04AA6D;
+  background-color: #f6590a;
   color: white;
+  font-size: 20px;
   padding: 16px 20px;
   margin: 8px 0;
+  margin-left: 10%;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 80%;
   opacity: 0.9;
 }
 
 .registerbtn:hover {
   opacity:1;
+  color: #000;
 }
 
 /* Add a blue text color to links */
@@ -306,7 +334,8 @@ a {
 .signin {
   background-color: #f1f1f1;
   text-align: center;
-}
+  height: 80px;
+  }
 
 
 

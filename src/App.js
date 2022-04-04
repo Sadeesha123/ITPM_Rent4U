@@ -12,6 +12,8 @@ import Login from './pages/Login';
 import Carmanagement from './components/carmanagement.component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
 import Dashboard from "./pages/Dashboard";
 
 
@@ -30,9 +32,13 @@ function App() {
     <Route path="/gallary" element={<Gallary/>}/>
     <Route path="/admin" element={<Admin/>}/>  
     <Route path="/Login" element={<Login/>}/>
-    <Route path="/dashboard" element={<Dashboard/>}/> 
+    
    </Routes>
+
+   
     </div>
+
+    
   );
 }
 

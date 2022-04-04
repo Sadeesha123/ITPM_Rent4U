@@ -10,78 +10,50 @@ import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
 const routes = [
   {
-    path: "/Dashboard",
+    path: "/",
     name: "Dashboard",
     icon: <FaHome />,
   },
+  
   {
-    path: "/users",
-    name: "Users",
-    icon: <FaUser />,
-  },
-  {
-    path: "/messages",
-    name: "Messages",
+    path: "/brand-management",
+    name: "Brand Management",
     icon: <MdMessage />,
   },
+  
   {
-    path: "/analytics",
-    name: "Analytics",
-    icon: <BiAnalyse />,
-  },
-  {
-    path: "/file-manager",
-    name: "File Manager",
+    path: "/car-bookings",
+    name: "Car Bookings",
     icon: <AiTwotoneFileExclamation />,
     subRoutes: [
       {
-        path: "/settings/profile",
-        name: "Profile ",
+        path: "new-bookings",
+        name: "New Bookings ",
         icon: <FaUser />,
       },
       {
-        path: "/settings/2fa",
-        name: "2FA",
+        path: "/cancelled-bookings",
+        name: "Cancelled Bookings",
         icon: <FaLock />,
       },
       {
-        path: "/settings/billing",
-        name: "Billing",
+        path: "/confirmed-bookings",
+        name: "Confirmed Bookings",
         icon: <FaMoneyBill />,
       },
-    ],
-  },
-  {
-    path: "/order",
-    name: "Order",
-    icon: <BsCartCheck />,
-  },
-  {
-    path: "/settings",
-    name: "Settings",
-    icon: <BiCog />,
-    exact: true,
-    subRoutes: [
+
       {
-        path: "/settings/profile",
-        name: "Profile ",
-        icon: <FaUser />,
-      },
-      {
-        path: "/settings/2fa",
-        name: "2FA",
+        path: "/admin-bookings",
+        name: "Admin Bookings",
         icon: <FaLock />,
       },
-      {
-        path: "/settings/billing",
-        name: "Billing",
-        icon: <FaMoneyBill />,
-      },
+      
     ],
   },
+ 
   {
-    path: "/saved",
-    name: "Saved",
+    path: "/car-management",
+    name: "Car Management",
     icon: <AiFillHeart />,
   },
 ];

@@ -1,9 +1,41 @@
 import React from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import './login.css';
 
-function Register() {
+
+function Register ()  {
+  
+
+
+        const [Data,setData] = useState([]);
+        const GetRegData = () =>{
+            //get Reg data
+            const url = 'http://localhost:8000/Regmanagement'
+            axios.get(url)
+            .then(response=>{
+                const result = response.data;
+                const {status, message, data}=result;
+                if(status !== 'SUCCESS'){
+                    alert(message,status)
+                }
+                else{
+                    setData(data)
+                    console.log(data)
+                }
+            }) 
+            .catch(err=>{
+                console.log(err)
+            }) 
+        }
+        //call this function use in uneffect
+    
+        useEffect(()=>{
+            GetRegData();
+        },[])
+
+    
     const initialValues = { username: "", nic: "", email: "", password: "", repassword: "" };
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
@@ -64,7 +96,7 @@ function Register() {
 
       return errors;
     };
-  
+   
     return (
       <div>
           <body className="bb"><br/><br/>
@@ -73,30 +105,30 @@ function Register() {
         ) : (
           <pre>{JSON.stringify()}</pre>
         )}
-  
+  <div className="bb">
         <form onSubmit={handleSubmit}>
         <div className="create">
        <div className="h0"> <h1>Sign Up</h1></div>
        <div className="ho">   <p>Please fill in this form to create an account.</p></div>
     <hr/>
-          <div className="ui divider"></div>
-          <div className="ui form">
-            <div className="field">
-              <label>Username</label><br/>
-              <input className="input" type="text" name="username" placeholder="Username" value={formValues.username} onChange={handleChange}/>
+       
+          <div >
+            <div className="group">
+              <label  className="l2">Username</label><br/>
+              <input className="label1" type="text" name="username" placeholder="Username" value={formValues.username} onChange={handleChange}/>
             </div>
             <p>{formErrors.username}</p>
 
-            <div className="field">
-              <label>NIC</label><br/>
-              <input className="input"
+            <div className="group">
+              <label className="l2">NIC</label><br/>
+              <input className="label1"
                 type="text" name="nic" placeholder="NIC" value={formValues.nic} onChange={handleChange}/>
             </div>
             <p>{formErrors.nic}</p>
 
-            <div className="field">
-              <label>Email</label><br/>
-              <input className="input"
+            <div className="group">
+              <label  className="l2">Email</label><br/>
+              <input className="label1"
                 type="text"
                 name="email"
                 placeholder="Email"
@@ -106,28 +138,26 @@ function Register() {
             </div>
             <p>{formErrors.email}</p>
 
-            <div className="field">
-              <label>Password</label><br/>
-              <input className="input" type="password"
-                name="password"
-                placeholder="Password"
-                value={formValues.password}
-                onChange={handleChange}
-              />
+            <div className="group">
+              <label  className="l2">Password</label><br/>
+              <input className="label1" type="password" id="myInput" name="password" placeholder="Password" value={formValues.password} onChange={handleChange}    />
+             
             </div>
             <p>{formErrors.password}</p>
-            <div className="field">
-
-              <label>Re enter Password</label><br/>
-              <input className="input"
-                type="repassword"
+            <div className="group">
+             <label  className="l2">Re enter Password</label><br/>
+              <input className="label1"  type="password" 
                 name="repassword"
                 placeholder="Confirm Password"
                 value={formValues.repassword}
                 onChange={handleChange}
+                
               />
+              
             </div>
-            <p>{formErrors.repassword}</p><br/>
+     
+           
+            <p>{formErrors.repassword}</p>
             <hr/>
             <p className="para">   &nbsp;&nbsp;&nbsp;&nbsp;By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
             <button type="submit" class="registerbtn">Register</button>
@@ -142,7 +172,7 @@ function Register() {
 
             
           </div></div>
-        </form><br/><br/></body><br/><br/>
+        </form></div><br/><br/></body><br/><br/>
       </div>
     );
   }

@@ -1,4 +1,6 @@
-
+body{
+	color: #bcc0c8;
+}
 
 .login-wrap{
 	width:100%;
@@ -37,6 +39,17 @@
 	font-weight: 700;
 	font-style: calc(2px);
 }
+
+.l2{
+	color: rgb(18, 20, 20);
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 25px;
+	font-style: italic;
+	font-weight: 700;
+	font-style: calc(2px);
+	margin-left: -35%;
+}
+
 .hw1{
 	color: rgb(152, 18, 18);
 	margin-left: 25%;
@@ -98,6 +111,16 @@
 	color:#fff;
 	display:block;
 }
+
+.group .label1,
+ .group .input,
+ .group .button{
+	width:60%;
+	color:rgb(21, 19, 19);
+	display:block;
+	margin-left: 18%;
+}
+
  .group .input,
 .login-form .group .button{
 	border:none;
@@ -212,21 +235,31 @@
 .bb{
     background-image: url("../images/reg.jpg");
 	background-size: cover;
+	color: rgb(21, 20, 20);
 
 }
 .create{
-	width: 40%;
-	height: 70%;
+	width: 48%;
+	height: 65%;
 	background-color: #fb9701;
-	margin-left: 25%;
+	margin-left: 23%;
 	opacity: 0.85;
+	color: rgb(248, 37, 4);
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	text-align: center;
+	font-size: 22px;
+    
+}
+.label{
+	color: #000;
+	margin-left: 23%;
 }
 .h0{
 	font-size: larger;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	font-weight: 800;
 	font-style: oblique;
-	margin-left: 38%;
+	margin-left: 36%;
 }
 .ho{
 	font-size: larger;
@@ -246,6 +279,7 @@
 	width: 60%;
 	border-radius: 7px;
 	border: #000;
+	color: rgb(38, 24, 237);
 }
 .field
     .input{
@@ -254,6 +288,7 @@
 	width: 60%;
 	height: 53px;
 	border-radius: 7px solid black;
+	
 
 }
 .para{
@@ -291,13 +326,13 @@ input[type=text], input[type=password] {
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
-  border: none;
+  border-color: #3dcbdb;
   background: #f1f1f1;
 }
 
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
-  outline: none;
+  outline-color: #000;
 }
 
 
@@ -335,6 +370,8 @@ a {
   background-color: #f1f1f1;
   text-align: center;
   height: 80px;
+  font-style: oblique;
+  font-size: 20px;
   }
 
 

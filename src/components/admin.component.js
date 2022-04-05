@@ -3,11 +3,13 @@ import styled from "styled-components";
 import Input from "./Input";
 import Button from "./Button";
 import '../styles/adminLogin.css';
+import {useNavigate} from 'react-router-dom'
 
 
 
 
 function Admin(){
+  const navigate = useNavigate();
     return <div>
        
         <body className="bodyb">
@@ -22,6 +24,16 @@ function Admin(){
     <style type="text/css" >
         { `.navbar1 {display:none}` }
     </style>
+    <style type="text/css" >
+    { `.main-container {display:none}` }
+</style>
+<style type="text/css" >
+    { `.sidebar {display:none}` }
+</style>
+<style type="text/css" >
+    { `.top_section {display:none}` }
+</style>
+
     
     
     <MainContainer>
@@ -34,7 +46,7 @@ function Admin(){
         </InputContainer>
   
         <ButtonContainer>
-          <Button content="Login" />
+          <Button content="Login" onClick={()=>navigate('/admin-dashboard')} /> 
         </ButtonContainer>
     </MainContainer>
     ;

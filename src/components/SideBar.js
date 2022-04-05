@@ -1,51 +1,58 @@
 import { NavLink } from "react-router-dom";
-import { FaBars, FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
-import { MdMessage } from "react-icons/md";
-import { BiAnalyse, BiSearch } from "react-icons/bi";
-import { BiCog } from "react-icons/bi";
-import { AiFillHeart, AiTwotoneFileExclamation } from "react-icons/ai";
-import { BsCartCheck } from "react-icons/bs";
+import { FaHome, FaBars } from "react-icons/fa";
+import { SiBrandfolder } from "react-icons/si";
+import { RiFileList3Line } from "react-icons/ri";
+import { IoIosAdd } from "react-icons/io";
+ import { MdOutlineCancel } from "react-icons/md";
+import { GiConfirmed } from "react-icons/gi";
+ import { AiTwotoneBell, AiFillCar} from "react-icons/ai";
+ import { BiSearch } from "react-icons/bi";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
+import '../styles/adminNavBar.css';
+import '../styles/adminNavBar1.css';
+
+
+
 const routes = [
   {
-    path: "/",
-    name: "Dashboard",
+    path: "/admin-dashboard",
+    name: "Admin Dashboard",
     icon: <FaHome />,
   },
   
   {
     path: "/brand-management",
     name: "Brand Management",
-    icon: <MdMessage />,
+    icon: <SiBrandfolder />,
   },
   
   {
     path: "/car-bookings",
     name: "Car Bookings",
-    icon: <AiTwotoneFileExclamation />,
+    icon: <RiFileList3Line />,
     subRoutes: [
       {
         path: "new-bookings",
         name: "New Bookings ",
-        icon: <FaUser />,
+        icon: <AiTwotoneBell />,
       },
       {
         path: "/cancelled-bookings",
         name: "Cancelled Bookings",
-        icon: <FaLock />,
+        icon: <MdOutlineCancel />,
       },
       {
         path: "/confirmed-bookings",
         name: "Confirmed Bookings",
-        icon: <FaMoneyBill />,
+        icon: <GiConfirmed />,
       },
 
       {
         path: "/admin-bookings",
         name: "Admin Bookings",
-        icon: <FaLock />,
+        icon: <IoIosAdd />,
       },
       
     ],
@@ -54,10 +61,11 @@ const routes = [
   {
     path: "/car-management",
     name: "Car Management",
-    icon: <AiFillHeart />,
+    icon: <AiFillCar />,
   },
 ];
 
+<body className="bodyc"></body>
 const SideBar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -97,7 +105,9 @@ const SideBar = ({ children }) => {
 
   return (
     <>
+    
       <div className="main-container">
+      
         <motion.div
           animate={{
             width: isOpen ? "200px" : "45px",
@@ -120,7 +130,7 @@ const SideBar = ({ children }) => {
                   exit="hidden"
                   className="logo"
                 >
-                  DoSomeCoding
+                  Rent4U
                 </motion.h1>
               )}
             </AnimatePresence>
@@ -188,6 +198,7 @@ const SideBar = ({ children }) => {
 
         <main>{children}</main>
       </div>
+      
     </>
   );
 };

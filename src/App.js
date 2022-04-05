@@ -23,6 +23,9 @@ import CarBookings from './pages/CarBookings';
 import CarManagement from './pages/CarManagement';
 import ConfirmedBookings from './pages/ConfirmedBookings';
 import NewBookings from './pages/NewBookings';
+import AdminDashboard from './pages/AdminDashboard';
+import SideBar from './components/SideBar';
+
 
 function App() {
   return (
@@ -44,19 +47,22 @@ function App() {
    </Routes>
 
 
-<Dashboard/>
+ 
+
+<SideBar>
    <Routes>
-     <Route path="/" element={<Dashboard />}/>
+     <Route path="/admin-dashboard" element={<AdminDashboard />}/>
      <Route path="/admin-bookings" element={<AdminBookings />}/>
      <Route path="/Brand-management" element={<BrandManagement />}/>
      <Route path="/cancelled-bookings" element={<CancelledBookings />}/>
      <Route path="/car-bookings" element={<CarBookings />}/>
      <Route path="/confirmed-bookings" element={<ConfirmedBookings />}/>
      <Route path="/new-bookings" element={<NewBookings />}/>
-     <Route path="/car-managements" element={<CarManagement />}/>
+     <Route path="/car-management" element={<CarManagement />}/>
 
-   </Routes>
-
+     <Route path="*" element={<> not found</>} />
+  </Routes>
+  </SideBar> 
    
     </div>
 

@@ -26,6 +26,16 @@ class Homepage extends React.Component {
   render() {
     return (
       <div>
+        <style type="text/css" >
+    { `.main-container {display:none}` }
+</style>
+<style type="text/css" >
+    { `.sidebar {display:none}` }
+</style>
+<style type="text/css" >
+    { `.top_section {display:none}` }
+</style>
+
                   
         <div>
           <head>

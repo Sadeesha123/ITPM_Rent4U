@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export default function Button({ content }) {
-  return <StyledButton>{content}</StyledButton>;
+export default function Button({ content,onClick }) {
+  return <StyledButton onClick={onClick}>{content}</StyledButton>;
 }
 
 const StyledButton = styled.button`
@@ -14,4 +14,5 @@ const StyledButton = styled.button`
   color: white;
   border-radius: 2rem;
   cursor: pointer; 
+  
 `;

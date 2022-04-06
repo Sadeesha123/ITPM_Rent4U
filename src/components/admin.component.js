@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
 import Input from "./Input";
 import Button from "./Button";
 import '../styles/adminLogin.css';
+import {useNavigate} from 'react-router-dom'
+
+
 
 
 function Admin(){
+  const navigate = useNavigate();
     return <div>
+       
         <body className="bodyb">
+
+       
     <style type="text/css" >
         { `.navlink {display:none}` }
     </style>
@@ -17,6 +24,16 @@ function Admin(){
     <style type="text/css" >
         { `.navbar1 {display:none}` }
     </style>
+    <style type="text/css" >
+    { `.main-container {display:none}` }
+</style>
+<style type="text/css" >
+    { `.sidebar {display:none}` }
+</style>
+<style type="text/css" >
+    { `.top_section {display:none}` }
+</style>
+
     
     
     <MainContainer>
@@ -29,7 +46,7 @@ function Admin(){
         </InputContainer>
   
         <ButtonContainer>
-          <Button content="Login" />
+          <Button content="Login" onClick={()=>navigate('/admin-dashboard')} /> 
         </ButtonContainer>
     </MainContainer>
     ;
@@ -48,16 +65,18 @@ const MainContainer = styled.div`
 display: flex;
 align-items: center;
 flex-direction: column;
-height: 60vh;
+height: 80vh;
 width: 30vw;
 background: rgba(255, 255, 255, 0.15);
 box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-backdrop-filter: blur(8.5px);
+backdrop-filter: blur(7px);
 -webkit-backdrop-filter: blur(8.5px);
 border-radius: 10px;
 color: #B8390E;
 text-transform: uppercase;
 letter-spacing: 0.3rem;
+font-weight: bold;
+
 `;
 
 
@@ -73,7 +92,7 @@ flex-direction: column;
 justify-content: space-around;
 align-items: center;
 height: 30%;
-width: 100%;
+width: 200%;
 `;
 
 const ButtonContainer = styled.div`

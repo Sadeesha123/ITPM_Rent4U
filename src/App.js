@@ -1,4 +1,5 @@
 import {Route,Routes} from 'react-router-dom';
+
 import './App.css';
 import AboutUs from './components/aboutus.component';
 import Admin from './components/admin.component';
@@ -12,8 +13,20 @@ import Login from './pages/Login';
 import Carmanagement from './components/carmanagement.component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
 import Dashboard from "./pages/Dashboard";
-import Register from './pages/Register';
+
+import AdminBookings from './pages/AdminBookings';
+import BrandManagement from './pages/BrandManagement';
+import CancelledBookings from './pages/CancelledBookings';
+import CarBookings from './pages/CarBookings';
+import CarManagement from './pages/CarManagement';
+import ConfirmedBookings from './pages/ConfirmedBookings';
+import NewBookings from './pages/NewBookings';
+import AdminDashboard from './pages/AdminDashboard';
+import SideBar from './components/SideBar';
+
 
 
 function App() {
@@ -31,11 +44,30 @@ function App() {
     <Route path="/gallary" element={<Gallary/>}/>
     <Route path="/admin" element={<Admin/>}/>  
     <Route path="/Login" element={<Login/>}/>
-    <Route path="/Register" element={<Register/>}/>
-    
-    <Route path="/Dashboard" element={<Dashboard/>}/> 
+
    </Routes>
+
+
+ 
+
+<SideBar>
+   <Routes>
+     <Route path="/admin-dashboard" element={<AdminDashboard />}/>
+     <Route path="/admin-bookings" element={<AdminBookings />}/>
+     <Route path="/Brand-management" element={<BrandManagement />}/>
+     <Route path="/cancelled-bookings" element={<CancelledBookings />}/>
+     <Route path="/car-bookings" element={<CarBookings />}/>
+     <Route path="/confirmed-bookings" element={<ConfirmedBookings />}/>
+     <Route path="/new-bookings" element={<NewBookings />}/>
+     <Route path="/car-management" element={<CarManagement />}/>
+
+     <Route path="*" element={<> not found</>} />
+  </Routes>
+  </SideBar> 
+   
     </div>
+
+    
   );
 }
 

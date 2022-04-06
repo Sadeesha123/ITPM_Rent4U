@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import Dashboard from "./pages/Dashboard";
+
 import AdminBookings from './pages/AdminBookings';
 import BrandManagement from './pages/BrandManagement';
 import CancelledBookings from './pages/CancelledBookings';
@@ -25,6 +26,7 @@ import ConfirmedBookings from './pages/ConfirmedBookings';
 import NewBookings from './pages/NewBookings';
 import AdminDashboard from './pages/AdminDashboard';
 import SideBar from './components/SideBar';
+
 
 
 function App() {
@@ -42,8 +44,7 @@ function App() {
     <Route path="/gallary" element={<Gallary/>}/>
     <Route path="/admin" element={<Admin/>}/>  
     <Route path="/Login" element={<Login/>}/>
-    
-    
+
    </Routes>
 
 

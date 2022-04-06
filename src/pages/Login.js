@@ -1,69 +1,89 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import './login.css';
 
 
 
 
 
-class Login extends React.Component {
-  render() {
-    return (
-      <div>
 
-        <div>
-          <head>
-            <title>Rent4U Car Rental System</title>
-          </head>
-        </div>
-        <body className=" body1">
+function Login() {
+	const initialValues = { username: "", email: "", password: "" };
+	const [formValues, setFormValues] = useState(initialValues);
+	const [formErrors, setFormErrors] = useState({});
+	const [isSubmit, setIsSubmit] = useState(false);
+  
+	const handleChange = (e) => {
+	  const { name, value } = e.target;
+	  setFormValues({ ...formValues, [name]: value });
+	};
+  
+	const handleSubmit = (e) => {
+	  e.preventDefault();
+	  setFormErrors(validate(formValues));
+	  setIsSubmit(true);
+	};
+  
+	useEffect(() => {
+	  console.log(formErrors);
+	  if (Object.keys(formErrors).length === 0 && isSubmit) {
+		console.log(formValues);
+	  }
+	}, [formErrors]);
+	const validate = (values) => {
+	  const errors = {};
+	  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+	  
+	  if (!values.email) {
+		errors.email = "Email is required!";
+	  } else if (!regex.test(values.email)) {
+		errors.email = "This is not a valid email format!";
+	  }
+	  if (!values.password) {
+		errors.password = "Password is required";
+	  } else if (values.password.length < 4) {
+		errors.password = "Password must be more than 4 characters";
+	  } else if (values.password.length > 10) {
+		errors.password = "Password cannot exceed more than 10 characters";
+	  }
+	  return errors;
+	};
+  
+	return (
 
-			<br/><br/><br/>
-         
-        <div class="login-wrap">
-	<div class="login-html">
-		<input id="tab-1" type="radio" name="tab" class="sign-in" checked/><label for="tab-1" class="tab">Sign In</label>
-		<input id="tab-2" type="radio" name="tab" class="sign-up"/><label for="tab-2" class="tab"></label>
-		<div class="login-form">
-			<div class="sign-in-htm"><br/>
-				<div class="group"><br/>
-					<label for="user" class="label"><b>Username</b></label>
-					<input id="user" type="text" class="input"/>
-				</div>
-				<div class="group">
-					<label for="pass" class="label"><b>Password</b></label>
-					<input id="pass" type="password" class="input" data-type="password"/>
-				</div>
-				
-				<div class="group">
-					<input type="submit" class="button" value="Sign In"/>
-				</div>
-				<div class="hr"></div>
-				<div class="foot-lnk">
-					<a href="#forgot">Forgot Password?</a>
-				</div>
+	  <div>
+	
+	<body className="zt">
+	<br/><br/>
+		<form onSubmit={handleSubmit}>
+		  
+		  <div className="login-wrap">
+		  <div className="login-html">
+			 
+		  <h1 className="hw1">Login Form</h1>
+
+			<p>{formErrors.username}</p>
+			<div className="group">
+			  <label className="l1">Email        </label>&nbsp;&nbsp;
+			  <input type="text" class="label" name="email" placeholder="Email" value={formValues.email} onChange={handleChange} />
 			</div>
-			
-				
-				
-				
-				
-				<div class="hr"></div>
-				
-			
-		</div>
-	</div>
-</div><br/><br/><br/><br/>
-
-
-
-
-
-        </body>
-      </div>
-
-    );
+			<p>{formErrors.email}</p>
+			<br/><div className="group">
+			  <label className="l1">Password    </label>&nbsp;&nbsp;
+			  <input type="password" class="label" name="password" placeholder="Password" value={formValues.password} onChange={handleChange} />
+			</div>
+			<p>{formErrors.password}</p>
+			<div className="group">
+			<button className="button">Submit</button></div><br/> 
+			<div className="foot-lnk">
+					<a href="#forgot" className="foot"> Forgot Password?</a>
+				</div>
+		  </div></div><br/>
+		</form></body>
+	  </div>
+	);
   }
-}
-
-export default Login;
+  
+  export default Login;
+  

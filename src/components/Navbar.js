@@ -10,13 +10,15 @@ function Navbar(){
         
         <div className='navlink' >
             
-        <NavLink activeClassName="active" className="link" to="/" >Home</NavLink>
-        <NavLink activeClassName="active" className="link" to="/carlist" >CarList</NavLink>
-        <NavLink activeClassName="active" className="link" to="/gallary" >Gallary</NavLink>
-        <NavLink activeClassName="active" className="link" to="/aboutus" >AboutUs</NavLink>
-        <NavLink activeClassName="active" className="link" to="/admin" >Admin</NavLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <NavLink activeClassName="active" className="link" to="/Login" ><button className='lb'> Login </button>  </NavLink>
-        <NavLink activeClassName="active" className="link" to="/Register" ><button className='lb'>SignUp</button></NavLink>
+
+        <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/" >Home</NavLink>
+        <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/carlist" >CarList</NavLink>
+        <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/gallary" >Gallary</NavLink>
+        <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/aboutus" >AboutUs</NavLink>
+        <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/admin" >Admin</NavLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/Login" ><button className='lb'> Login </button>  </NavLink>
+        <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/aboutus" ><button className='lb'>SignUp</button></NavLink>
+
         
         </div>
 

@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Button, Modal } from "react-bootstrap";
 
+
 const CarManagement = () => {
-  const [RowData,SetRowData]=useState([])
-  const [ViewShow,SetViewShow]=useState(false)
-  const handleViewShow = () =>{SetViewShow(true)}
-  const handleViewClose = () =>{SetViewShow(false)}
-  const [Data,setData] = useState([]);
+    const [RowData,SetRowData]=useState([])
+    const [ViewShow,SetViewShow]=useState(false)
+    const handleViewShow = () =>{SetViewShow(true)}
+    const handleViewClose = () =>{SetViewShow(false)}
+    const [Data,setData] = useState([]);
+  
     const GetCarData = () =>{
         //get car data
         const url = 'http://localhost:8000/Carmanagement'
@@ -28,23 +30,31 @@ const CarManagement = () => {
         }) 
     }
     //call this function use in uneffect
+
     useEffect(()=>{
         GetCarData();
     },[])
 
-  return( <div className="title">   
+
+
+
+  return <div className="title">   
   
   
-  <style type="text/css" >
-        { `.navbar {display:none}` }
-    </style>
-    <style type="text/css" >
-        { `.navbar1 {display:none}` }
-    </style>
-            <div className='row'>
+   <style type="text/css" >
+  { `.navlink {display:none}` }
+</style>
+<style type="text/css" >
+  { `.navbar {display:none}` }
+</style>
+<style type="text/css" >
+  { `.navbar1 {display:none}` }
+</style>
+
+        <div className='row'>
                 <div className='mt-5 mb-4'>
                 <Button variant='primary'><i className='fa fa-plu'></i>
-                Add New Employee
+                Add New Car
                 </Button> 
                     </div>
             </div>
@@ -53,13 +63,13 @@ const CarManagement = () => {
                     <table className='table table-striped table-hover table-bordered'>
                         <thead>
                             <tr>
-                                <th>Vehicle Title</th>
-                                <th>Email</th>
-                                <th>Brand</th>
-                                <th>Price per Day</th>
-                                <th>Fuel Type</th>
-                                <th>Model Year</th>
-                                <th>Action</th>
+                                <th style={{fontSize:25}}>Vehicle Title</th>
+                                <th style={{fontSize:25}}>Email</th>
+                                <th style={{fontSize:25}}>Brand</th>
+                                <th style={{fontSize:25}}>Price per Day</th>
+                                <th style={{fontSize:25}}>Fuel Type</th>
+                                <th style={{fontSize:25}}>Model Year</th>
+                                <th style={{fontSize:25}}>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -121,7 +131,12 @@ const CarManagement = () => {
 
             </div>
         </div>
-    );
+
+
+
+  
+
+
 };
 
 export default CarManagement;

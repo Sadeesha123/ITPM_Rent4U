@@ -27,7 +27,7 @@ NewUser.save().then(()=>{
 
 router.route("/display").get((req,res) =>{
     
-    User.find().them((User)=>{
+    User.find().then((User)=>{
         res.json(User)
     }).catch((err)=>{
         console.log(err);

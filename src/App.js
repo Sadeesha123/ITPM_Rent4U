@@ -7,12 +7,10 @@ import AboutUs from './components/aboutus.component';
 import Admin from './components/admin.component';
 import CarList from './components/carlist.component';
 import Gallary from './components/gallary.component';
-import Index from './components/index.component';
 import Navbar from './components/Navbar';
 import Homepage from './pages/Homepage';
 import Slider from './pages/Slider';
 import Login from './pages/Login';
-import Carmanagement from './components/carmanagement.component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -65,8 +63,7 @@ function App() {
 
 
  
-
-<SideBar>
+  <SideBar>
    <Routes>
      <Route path="/admin-dashboard" element={<AdminDashboard />}/>
      <Route path="/admin-bookings" element={<AdminBookings />}/>
@@ -77,9 +74,11 @@ function App() {
      <Route path="/new-bookings" element={<NewBookings />}/>
      <Route path="/car-management" element={<CarManagement />}/>
 
-     <Route path="*" element={<> not found</>} />
+     
   </Routes>
   </SideBar> 
+
+
    
     </div>
 

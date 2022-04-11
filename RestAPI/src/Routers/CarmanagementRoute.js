@@ -22,5 +22,25 @@ router.post("/Carmanagement", async (req,res)=>{
         })
     }
 })
-
+router.get("/Carmanagement", async (req,res)=>{
+    await CarManagement.find()
+    .then(result => {
+        if(!result){
+            res.json({
+                status:"FAILED",
+                message:"zero records"
+            })
+        }
+        else{
+            res.json({
+                status:"SUCCESS",
+                message:`${result.length} cars found successfully`,
+                data:result
+            })
+        }
+    })
+    .catch(error => {
+        res.status(400).json({error: error})
+    })
+})
 module.exports = router

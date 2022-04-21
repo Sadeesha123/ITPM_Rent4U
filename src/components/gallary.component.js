@@ -20,7 +20,7 @@ function Gallary(){
 
 
 
-
+//This Gallary page
 
 
 

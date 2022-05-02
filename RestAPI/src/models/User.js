@@ -7,6 +7,7 @@ const UserSchema = new Schema({
     username: {
         type:String,
         required: true
+        
     },
     nic: {
         type:String,
@@ -15,7 +16,8 @@ const UserSchema = new Schema({
     },
     email: {
         type:String,
-        required: true
+        required: true,
+        
     },
     password: {
         type:String,

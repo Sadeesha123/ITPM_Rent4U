@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-mongoose.connect("mongodb+srv://Sadeesha:mahanama1@crud.fezih.mongodb.net/Rent4U")
+mongoose.connect("mongodb+srv://nuha:Mongo123@crud.fezih.mongodb.net/Rent4U")
 
 
 .then(()=>{

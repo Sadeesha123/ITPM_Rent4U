@@ -1,6 +1,7 @@
-const express = require('express').Router();
-let User = require("../models/User");
-const router = require('./CarmanagementRoute');
+const router = require('express').Router();
+let User = require("./../models/User");
+
+
 
 
 router.route("/add").post((req,res) =>{
@@ -25,10 +26,21 @@ NewUser.save().then(()=>{
 
 })
 
+
+
+
+
+
+
+
+
+
+
+
 router.route("/display").get((req,res) =>{
     
-    User.find().then((User)=>{
-        res.json(User)
+    User.find().then((user)=>{
+        res.json(user)
     }).catch((err)=>{
         console.log(err);
     })
@@ -47,12 +59,40 @@ router.route("/display").get((req,res) =>{
         }
         const update = await User.findByIdAndUpdate(userId,updateUser)
         .then(()=>{
-            res.status(200).send({status : "User updated",user :update })
+            res.status(200).send({status : "User updated" })
          }).catch((err)=>{
              console.log(err);
              res.status(500).send({status : "Error in updating data"});
          })
         })
+
+
+        router.route("/delete/:id").delete(async (req,res)=>{
+            let userId = req.params.id;
+
+            await User.findByIdAndDelete(userId)
+            .then(()=> {
+                res.status(200).send({status : "User deleted" });
+             }).catch((err)=>{
+                console.log(err);
+                res.status(500).send({status : "Error in deleting data",error : err.message});
+            
+        })
+    })
+
+    router.route("/get/:id").get(async (req,res)=>{
+        let userId = req.params.id;
+
+        const user=await User.findById(userId)
+        .then((user)=> {
+            res.status(200).send({status : "User fetched",user });
+         }).catch((err)=>{
+            console.log(err.message);
+            res.status(500).send({status : "Error in fetching user data",error : err.message});
+        
+    })
+})
+        
 
         
 

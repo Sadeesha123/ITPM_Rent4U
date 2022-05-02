@@ -14,6 +14,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Homore from './pages/Homore';
 import Lprofile from './pages/Lprofile';
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

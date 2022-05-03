@@ -21,14 +21,14 @@ function BookingDetails({ formData, setFormData }) {
           setFormData({ ...formData, returnDate: e.target.value });
         }}
       />
-      <input
+      {/* <input
         type="time"
         placeholder="Handover Time"
         value={formData.handoverTime}
         onChange={(e) => {
           setFormData({ ...formData, handoverTime: e.target.value });
         }}
-      />
+      /> */}
     </div>
   );
 }

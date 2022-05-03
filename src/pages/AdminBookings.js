@@ -3,6 +3,8 @@ import VehicleDetails from "./VehicleDetails";
 import CustomerDetails from "./CustomerDetails";
 import BookingDetails from "./BookingDetails";
 
+import bookingService from "../service/bookingService";
+
 
 
 
@@ -17,8 +19,47 @@ const AdminBookings = () => {
     contact: "",
     handoverDate: "",
     returnDate: "",
-    handoverTime: "",
+    // handoverTime: "",
   });
+
+
+  const adminBookingSubmit = (e)=>{
+    e.preventDefault();
+    // if (page === FormTitles.length - 1) {
+    //   alert("BOOKING SUBMITTED");
+    //   console.log(formData);
+    // } else {
+    //   setPage((currPage) => currPage + 1);
+    // }
+    console.log('Form Data: ',formData);
+    if (page === FormTitles.length - 1){
+      bookingService.adminBooking(formData)
+      .then(
+         (data) => {
+           console.log(data)
+           
+           alert(data)
+             
+            
+            
+         },
+         (error) => {
+             const resMessage =
+                 (error.response &&
+                     error.response.data &&
+                     error.response.data.message) ||
+                 error.message ||
+                 error.toString();
+ 
+           
+             alert(resMessage);
+         }
+     );
+    }else{
+      setPage((currPage) => currPage + 1);
+    }
+   
+  }
 
   const FormTitles = ["Vehicle Details", "Customer Details", "Booking Details"];
 
@@ -71,14 +112,7 @@ const AdminBookings = () => {
             Back
           </button>
           <button
-            onClick={() => {
-              if (page === FormTitles.length - 1) {
-                alert("BOOKING SUBMITTED");
-                console.log(formData);
-              } else {
-                setPage((currPage) => currPage + 1);
-              }
-            }}
+            onClick={adminBookingSubmit}
           >
             {page === FormTitles.length - 1 ? "Submit" : "Next"}
           </button>

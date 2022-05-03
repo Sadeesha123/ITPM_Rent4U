@@ -93,16 +93,7 @@ const handleLogin = (e) => {
   <InputContainer>
           <Input type="text" name="email"  placeholder="Email Address" value={email} onChange={onChangeEmail} />
           <Input type="password" placeholder="Password" name="password" value={password} onChange={onChangePassword} />
-          
-          <div class="mb-3">
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="dropdownCheck2" />
-      <label class="form-check-label" for="dropdownCheck2">
-        Remember me
-      </label>
-    </div>
-  </div>
-          
+
         </InputContainer>
   
         <ButtonContainer>

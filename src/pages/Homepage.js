@@ -52,14 +52,15 @@ class Homepage extends React.Component {
     <table >
       <tr>
         <th>   
-        <h2 className="hel"><b>WELCOME TO RENT4U</b></h2><br/>
-<h3 className="hello"><b> PREMIER CAR RENTAL SERVICES <br/> IN SRI LANKA </b></h3>
-<p className="hello"> With over 30 years of experience in the industry, we strive to offer<br/> the highest
- levels of customer service and a highly personalised<br/> service to all our customers who are on 
+<h2><b>WELCOME TO RENT4U</b></h2><br/>
+<h3><b> PREMIER CAR RENTAL SERVICES <br/> IN SRI LANKA </b></h3>
+<p> With over 30 years of experience in the industry, we strive to offer the highest
+ levels of customer service <br/>
+ and a highly personalised service to all our customers who are on 
  the lookout for Sri Lanka car rental opportunities,<br/>
   With one of the largest and most  modern and varied fleets in Sri Lanka, our service is backed by a networked front office,<br/>
  fully-fledged mechanical servicing and valet servicing onsite.</p> 
- <Link to="/Homore">    <br/>   <button className="details">More details</button></Link> 
+ <Link to="/details">    <br/>   <button className="details">More details</button></Link> 
  </th> <th><img src={car1} /></th>
  </tr>
  </table>  

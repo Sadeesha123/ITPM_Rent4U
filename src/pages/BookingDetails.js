@@ -5,7 +5,7 @@ function BookingDetails({ formData, setFormData }) {
   return (
     <div className="booking-container">
       <input
-        type="text"
+        type="date"
         placeholder="Handover Date"
         value={formData.handoverDate}
         onChange={(e) => {
@@ -14,21 +14,21 @@ function BookingDetails({ formData, setFormData }) {
       />
       <input
         
-        type="text"
+        type="date"
         placeholder="Return Date"
         value={formData.returnDate}
         onChange={(e) => {
           setFormData({ ...formData, returnDate: e.target.value });
         }}
       />
-      <input
-        type="text"
+      {/* <input
+        type="time"
         placeholder="Handover Time"
         value={formData.handoverTime}
         onChange={(e) => {
           setFormData({ ...formData, handoverTime: e.target.value });
         }}
-      />
+      /> */}
     </div>
   );
 }

@@ -6,7 +6,36 @@ import './login.css';
 
 
 function Register ()  {
- 
+  
+
+
+        const [Data,setData] = useState([]);
+        const GetRegData = () =>{
+            //get Reg data
+            const url = 'http://localhost:8000/Regmanagement'
+            axios.get(url)
+            .then(response=>{
+                const result = response.data;
+                const {status, message, data}=result;
+                if(status !== 'SUCCESS'){
+                    alert(message,status)
+                }
+                else{
+                    setData(data)
+                    console.log(data)
+                }
+            }) 
+            .catch(err=>{
+                console.log(err)
+            }) 
+        }
+        //call this function use in uneffect
+    
+        useEffect(()=>{
+            GetRegData();
+        },[])
+
+    
     const initialValues = { username: "", nic: "", email: "", password: "", repassword: "" };
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
@@ -17,15 +46,10 @@ function Register ()  {
       setFormValues({ ...formValues, [name]: value });
     };
   
-
     const handleSubmit = (e) => {
       e.preventDefault();
-           
-         
       setFormErrors(validate(formValues));
       setIsSubmit(true);
-      
-
     };
   
     useEffect(() => {
@@ -77,7 +101,7 @@ function Register ()  {
       <div>
           <body className="bb"><br/><br/>
         {Object.keys(formErrors).length === 0 && isSubmit ? (
-          alert("You are being registered successfully")
+          <div className="ui message success">Signed in successfully</div>
         ) : (
           <pre>{JSON.stringify()}</pre>
         )}
@@ -123,7 +147,12 @@ function Register ()  {
             <div className="group">
              <label  className="l2">Re enter Password</label><br/>
               <input className="label1"  type="password" 
-                name="repassword"                placeholder="Confirm Password" value={formValues.repassword} onChange={handleChange} />
+                name="repassword"
+                placeholder="Confirm Password"
+                value={formValues.repassword}
+                onChange={handleChange}
+                
+              />
               
             </div>
      
@@ -132,7 +161,6 @@ function Register ()  {
             <hr/>
             <p className="para">   &nbsp;&nbsp;&nbsp;&nbsp;By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
             <button type="submit" class="registerbtn">Register</button>
-
             <div class="container signin">
             <br/>  <p>    Already have an account? <a href="#">Sign in</a>.</p>
   </div>

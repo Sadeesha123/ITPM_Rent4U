@@ -11,16 +11,11 @@ import Navbar from './components/Navbar';
 import Homepage from './pages/Homepage';
 import Slider from './pages/Slider';
 import Login from './pages/Login';
-import Register from './pages/Register';
-import Homore from './pages/Homore';
-import Lprofile from './pages/Lprofile';
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import Dashboard from "./pages/Dashboard";
-import Booking from './pages/Booking';
+
 import AdminBookings from './pages/AdminBookings';
 import BrandManagement from './pages/BrandManagement';
 import CancelledBookings from './pages/CancelledBookings';
@@ -30,7 +25,6 @@ import ConfirmedBookings from './pages/ConfirmedBookings';
 import NewBookings from './pages/NewBookings';
 import AdminDashboard from './pages/AdminDashboard';
 import SideBar from './components/SideBar';
-
 
 
 
@@ -58,29 +52,20 @@ function App() {
 <Navbar />
 
    <Routes>
-     
     <Route path="/" element={<Homepage/>}/>
-    <Route path="/Homore" element={<Homore/>}/>
-    <Route path="/Lprofile" element={<Lprofile/>}/>
     <Route path="/carlist" element={<CarList/>}/>
     <Route path="/aboutus" element={<AboutUs/>}/>
     <Route path="/gallary" element={<Gallary/>}/>
     <Route path="/admin" element={<Admin/>}/>  
-    <Route path="/Booking" element={<Booking/>}/>  
     <Route path="/Login" element={<Login/>}/>
-    
-    <Route path="/Register" element={<Register/>}/>
-    
 
    </Routes>
 
 
  
-
   <SideBar>
    <Routes>
      <Route path="/admin-dashboard" element={<AdminDashboard />}/>
-     
      <Route path="/admin-bookings" element={<AdminBookings />}/>
      <Route path="/Brand-management" element={<BrandManagement />}/>
      <Route path="/cancelled-bookings" element={<CancelledBookings />}/>

@@ -43,6 +43,16 @@ function Admin(){
   <InputContainer>
           <Input type="text" placeholder="Email Address" />
           <Input type="password" placeholder="Password" />
+          
+          <div class="mb-3">
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="dropdownCheck2" />
+      <label class="form-check-label" for="dropdownCheck2">
+        Remember me
+      </label>
+    </div>
+  </div>
+          
         </InputContainer>
   
         <ButtonContainer>

@@ -7,62 +7,6 @@
     background-size: cover;
     
 }
-.b{
-    background-image: url("../images/p0.jpg.crdownload");
-    width: auto;
-    height: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.boo{
-    background-image: url("../images/book.png");
-    width: auto;
-    height: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.boo1{
-    background-color: antiquewhite;
-    opacity: 0.8;
-    width:60%;
-    margin-left: 19%;
-}
-.boo2{
-    color: #24185a;
-    font-size: 27px;
-    font-style: oblique;
-    font-family: cursive;
-    text-align: center;
-}
-.boo3{
-    color: #24185a;
-    font-size: 24px;
-    font-style: oblique;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-}
-.boo4{
-    color: #1f1d25;
-    font-size: 24px;
-    font-family:Arial, Helvetica, sans-serif;
-    margin-left: 3%;
-}
-.boo5{
-    width: 20%;
-    height: 7%;
-    margin-left: 1%;
-}
-.b006{
-    width:27%;
-    height: 14%;
-    margin-left: 40%;
-    background-color: #3913e6;
-    color: #000;
-    font-family: 'Gill Sans', 'Gill Sans MT', Verdana, Geneva, Tahoma, sans-serif, 'Trebuchet MS', sans-serif;
-    font-size: 25px;
-}
 .box1{
     text-align: left;
 }
@@ -70,49 +14,7 @@
     text-align: right;
 }
 
-.hel{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: oblique;
-    font-variant: normal;
-    color: #24185a;
-    text-align: center;
-  }
 
-  .hello{
-      text-align: center;
-  }
-
-  .details{
-      text-align: center;
-      margin-left: 40%;
-  }
-.jh{
-    background-color: #c1bdd0;
-    width: 70%;
-    margin-left: 15%;
-    opacity: 0.8;
-}
-  .jj{
-      font-size: 26px;
-      color: #000;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      margin-left: 2%;
-  }
-  .j2{
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-style: italic;
-      font-size: 20px;
-      color: #000;
-      margin-left: 3%;
-      margin-right: 3%;
-  }
-
-  .button1{
-      width: 10%;
-      height: 7%;
-      background-color: #eca710;
-      margin-left: 80%;
-  }
 
 .view{
     display: inline-block;

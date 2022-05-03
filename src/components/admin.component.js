@@ -3,12 +3,62 @@ import styled from "styled-components";
 import Input from "./Input";
 import Button from "./Button";
 import '../styles/adminLogin.css';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
+import auth_service from '../service/auth_service';
 
 
 
 
 function Admin(){
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const Home = () => {
+   navigate("/");
+  };
+
+  const onChangeEmail = (e) => {
+    const email = e.target.value;
+    setEmail(email);
+};
+
+const onChangePassword = (e) => {
+    const password = e.target.value;
+    setPassword(password);
+};
+
+const handleLogin = (e) => {
+    e.preventDefault();
+        console.log('Email & Password: ',email+" "+password);
+        auth_service.adminLogin(email, password)
+         .then(
+            (data) => {
+              console.log(data)
+              
+              
+                if(data.role === "admin"){
+                    alert('Admin login Success!')
+                    navigate('/admin-dashboard');
+                      
+                }
+                
+               
+               
+            },
+            (error) => {
+                const resMessage =
+                    (error.response &&
+                        error.response.data &&
+                        error.response.data.message) ||
+                    error.message ||
+                    error.toString();
+
+              
+                alert(resMessage);
+            }
+        );
+
+};
   const navigate = useNavigate();
     return <div>
        
@@ -41,8 +91,8 @@ function Admin(){
     <WelcomeText>Admin Login</WelcomeText>
   
   <InputContainer>
-          <Input type="text" placeholder="Email Address" />
-          <Input type="password" placeholder="Password" />
+          <Input type="text" name="email"  placeholder="Email Address" value={email} onChange={onChangeEmail} />
+          <Input type="password" placeholder="Password" name="password" value={password} onChange={onChangePassword} />
           
           <div class="mb-3">
     <div class="form-check">
@@ -56,7 +106,7 @@ function Admin(){
         </InputContainer>
   
         <ButtonContainer>
-          <Button content="Login" onClick={()=>navigate('/admin-dashboard')} /> 
+          <Button content="Login" onClick={handleLogin} /> 
         </ButtonContainer>
     </MainContainer>
     ;

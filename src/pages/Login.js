@@ -55,6 +55,12 @@ function Login() {
 	  <div>
 	
 	<body className="zt">
+
+	{Object.keys(formErrors).length === 0 && isSubmit ? (
+          alert("You have logged in successfully")
+        ) : (
+          <pre>{JSON.stringify()}</pre>
+        )}
 	<br/><br/>
 		<form onSubmit={handleSubmit}>
 		  
@@ -75,7 +81,7 @@ function Login() {
 			</div>
 			<p>{formErrors.password}</p>
 			<div className="group">
-			<button className="button">Submit</button></div><br/> 
+			<button className="button">Submit</button> </div><br/> 
 			<div className="foot-lnk">
 					<a href="#forgot" className="foot"> Forgot Password?</a>
 				</div>

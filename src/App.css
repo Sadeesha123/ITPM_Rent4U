@@ -22,17 +22,17 @@
   display: flex;
   justify-content: space-evenly;
   word-spacing: 7px;
-  margin-right: 60%;
+  margin-left: 7%;
   margin-top: -5%;
 }
 
 
 .link{
   text-decoration: none;
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 400;
   color: rgb(15, 14, 14);
- font-family: Georgia, 'Times New Roman', Times, serif;
+ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-left: 80px;
   padding: 10px;
 }
@@ -66,7 +66,7 @@
     background-color: rgb(18, 16, 27);
     width:450px;
     margin-right:200px;
-    margin-top:65px;
+    margin-top:5px;
   }
   
   
@@ -76,7 +76,7 @@
     background-color:rgb(18, 16, 27) ;
     width:280px;
     margin-left:600px;
-    margin-top:-100px;
+    margin-top:-120px;
     font-size: 20px;
   }
   
@@ -90,9 +90,9 @@
   color:white;
   position: bottom-fixed;
   font-size:12.8px;
-  width:cover;
-  height: 212px;
-   margin-top:-100px;
+  width:100%;
+  height: 250px;
+   margin-top:-90px;
   padding-top:1px;
     }  
   .ways{
@@ -100,11 +100,6 @@
     background-color: rgb(18, 16, 27);
     width:280px;
     margin-left:1160px;
-    margin-top:12px;
+    margin-top:-42px;
     margin-bottom: 1px;
   }
-
-
-
-
-

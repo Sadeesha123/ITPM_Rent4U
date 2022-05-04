@@ -4,8 +4,8 @@ import './AdminBooking.css';
 function VehicleDetails({ formData, setFormData }) {
   return (
     <div className="vehicle-container">
-
-<input
+      <label>Vehicle Brand:</label>
+      <input
         type="text"
         placeholder="Vehicle Brand"
         value={formData.brand}
@@ -13,7 +13,8 @@ function VehicleDetails({ formData, setFormData }) {
           setFormData({ ...formData, brand: event.target.value })
         }
       />
-    
+
+      <label>Vehicle Name:</label>
       <input
         type="text"
         placeholder="Vehicle Name"

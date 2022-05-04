@@ -9,7 +9,11 @@ import Youtb from "../images/Youtb.png";
 import Facebk from "../images/faceb.png";
 import In from "../images/in.png";
 
-export default function Booking(){
+export default function User_Bookings(){
+
+
+
+  
 
   const [name, setName] = useState("");
   const [contact_no, setContact_no] = useState("");
@@ -42,6 +46,9 @@ export default function Booking(){
   return(
     <div>
       <body className="boo"><br/><br/>
+
+      
+
       <div className="boo1">
       <form onSubmit={sendDatab}><br/>
       <div >

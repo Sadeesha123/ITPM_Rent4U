@@ -26,17 +26,6 @@ NewUser.save().then(()=>{
 
 })
 
-
-
-
-
-
-
-
-
-
-
-
 router.route("/display").get((req,res) =>{
     
     User.find().then((user)=>{

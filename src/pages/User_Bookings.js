@@ -9,7 +9,11 @@ import Youtb from "../images/Youtb.png";
 import Facebk from "../images/faceb.png";
 import In from "../images/in.png";
 
-export default function Booking(){
+export default function User_Bookings(){
+
+
+
+  
 
   const [name, setName] = useState("");
   const [contact_no, setContact_no] = useState("");
@@ -26,10 +30,8 @@ export default function Booking(){
   const newBooking ={
     name,
     contact_no,
-    email,
-    handover_location,
     handover_date,
-    handover_time,
+    
     return_date
    }
    axios.post("http://localhost:8000/book",newBooking).then(()=>{
@@ -42,6 +44,9 @@ export default function Booking(){
   return(
     <div>
       <body className="boo"><br/><br/>
+
+      
+
       <div className="boo1">
       <form onSubmit={sendDatab}><br/>
       <div >
@@ -55,30 +60,16 @@ export default function Booking(){
    <br/>
   </div>
   <div className="boo4">
-    <label >NIC</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label >Contact No</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="text" className="b005" name="nic" onChange={(e)=>{setContact_no(e.target.value);}} required/>
     
   </div>
-  <div className="boo4">
-    <label>Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" className="boo5" name="email"  onChange={(e)=>{setEmail(e.target.value);}} required/><br/>
   
-  </div>
-  <div className="boo4">
-    <label>Handover Location</label>&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" className="boo5" name="handover_location"  onChange={(e)=>{setHandover_location(e.target.value);}} required/>
-  </div>
-
+  
   <div className="boo4">
     <label>Handover Date</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="date" className="boo5" name="handover_date"  onChange={(e)=>{setHandover_date(e.target.value);}} required/>
   </div>
-
-  <div className="boo4">
-    <label>Handover Time</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="time" className="boo5" name="handover_time"  onChange={(e)=>{setHandover_time(e.target.value);}} required/>
-  </div>
-  
 
   <div className="boo4">
     <label>Return Date</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

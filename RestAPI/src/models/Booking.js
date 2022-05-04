@@ -15,6 +15,18 @@ const bookingSchema = new mongoose.Schema({
         max:100,
         required:true
     },
+
+      
+    handover_date: {
+        type:String,
+        required: true
+    },
+   
+   
+
+    return_date: {
+        type:String,
+ 
     user:{
         type:String,
         min:6,
@@ -38,6 +50,7 @@ const bookingSchema = new mongoose.Schema({
     bookingDate:{
         type:Date,
         default:Date.now()
+
     },
    
 })

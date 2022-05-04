@@ -43,7 +43,9 @@ class Lprofile extends React.Component {
         <body className="b">
           <br/> <br/>
 
-        <Link to="/Booking">	<button className="button1">BOOK</button> </Link><br/> 
+        <Link to="/User_Bookings">	<button className="button1">BOOK</button> </Link><br/> 
+        <Link to="/UserDashboard">	<button className="button1">User Dashboard</button> </Link><br/> 
+        
 
 
        <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>

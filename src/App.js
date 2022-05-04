@@ -11,6 +11,15 @@ import Navbar from './components/Navbar';
 import Homepage from './pages/Homepage';
 import Slider from './pages/Slider';
 import Login from './pages/Login';
+
+import Register from './pages/Register';
+import Homore from './pages/Homore';
+import Lprofile from './pages/Lprofile';
+import ViewUserProfile from './pages/ViewUserProfile';
+import UserDashboard from './pages/UserDashboard';
+import ViewBookings from './pages/ViewBookings';
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -25,7 +34,7 @@ import ConfirmedBookings from './pages/ConfirmedBookings';
 import NewBookings from './pages/NewBookings';
 import AdminDashboard from './pages/AdminDashboard';
 import SideBar from './components/SideBar';
-
+import User_Bookings from './pages/User_Bookings';
 
 
 function App() {
@@ -57,7 +66,17 @@ function App() {
     <Route path="/aboutus" element={<AboutUs/>}/>
     <Route path="/gallary" element={<Gallary/>}/>
     <Route path="/admin" element={<Admin/>}/>  
+
+    <Route path="/ViewUserProfile" element={<ViewUserProfile/>}/>
+    <Route path="/UserDashboard" element={<UserDashboard/>}/>  
     <Route path="/Login" element={<Login/>}/>
+    <Route path="/User_Bookings" element={<User_Bookings/>}/>
+    <Route path="/ViewBookings" element={<ViewBookings/>}/>
+    <Route path="/Register" element={<Register/>}/>
+    
+
+    <Route path="/Login" element={<Login/>}/>
+
 
    </Routes>
 

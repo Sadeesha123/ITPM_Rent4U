@@ -259,15 +259,16 @@ body{
 .createpro{
 	width: 30%;
 	height: 45%;
-	background-color: #1d71bf;
-	opacity: 0.8;
-	margin-left: 23%;
+	background-color: #d0a266;
+	opacity: 0.7;
+	margin-left: 34%;
 	font-size: 22px;
     
 }
 .inputpro{
 	width: 2px;
 	height: 3px;
+	
 }
 .labelpro{
 	text-align: left;

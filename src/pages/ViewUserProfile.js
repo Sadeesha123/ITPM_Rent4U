@@ -32,27 +32,27 @@ function Register ()  {
         <br/>
              <div className="">
               <label  className="labelpro">Username</label>
-              <input className="inputpro" type="text" name="username" placeholder="Username" />
+              &nbsp; &nbsp; <input className="inputpro" type="text" name="username" placeholder="Username" />
             </div>
            
             <div className="">
               <label className="labelpro">NIC</label>
-              <input className="inputpro" type="text" name="nic" placeholder="NIC" />
+              &nbsp; &nbsp; <input className="inputpro" type="text" name="nic" placeholder="NIC" />
             </div> 
 
             <div className="">
               <label  className="labelpro">Email</label>
-              <input className="inputpro" type="text" name="email" placeholder="Email" />
+             &nbsp; &nbsp; <input className="inputpro" type="text" name="email" placeholder="Email" />
             </div>
             
             <div className="">
               <label  className="labelpro">Password</label>
-              <input className="inputpro" type="password" id="myInput" name="password" placeholder="Password" />
+              &nbsp; &nbsp;  <input className="inputpro" type="password" id="myInput" name="password" placeholder="Password" />
              
             </div>
             <div className="">
              <label  className="labelpro">Re enter Password</label>
-              <input className="inputpro"  type="password" name="repassword" />
+             &nbsp; &nbsp;  <input className="inputpro"  type="password" name="repassword" />
               
             </div>            <hr/>
             

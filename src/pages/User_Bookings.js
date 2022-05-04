@@ -31,6 +31,7 @@ export default function User_Bookings(){
     name,
     contact_no,
     handover_date,
+    
     return_date
    }
    axios.post("http://localhost:8000/book",newBooking).then(()=>{
@@ -58,7 +59,13 @@ export default function User_Bookings(){
     <input type="text" className="boo5" name="username"  onChange={(e)=>{setName(e.target.value);}} required/>
    <br/>
   </div>
-
+  <div className="boo4">
+    <label >Contact No</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" className="b005" name="nic" onChange={(e)=>{setContact_no(e.target.value);}} required/>
+    
+  </div>
+  
+  
   <div className="boo4">
     <label>Handover Date</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="date" className="boo5" name="handover_date"  onChange={(e)=>{setHandover_date(e.target.value);}} required/>

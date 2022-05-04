@@ -6,20 +6,14 @@ let Booking = require("./../models/Booking");
 router.route("/book").post((req,res) =>{
     const name = req.body.name ;
     const contact_no = req.body.contact_no ;
-    const email = req.body.email ;
-    const  handover_location = req.body. handover_location ;
     const handover_date = req.body.handover_date ;
-    const handover_time = req.body.handover_time ;
     const  return_date = req.body. return_date ;
 
 
     const NewBooking = new Booking({
         name,
         contact_no,
-        email,
-        handover_location,
         handover_date,
-        handover_time,
         return_date
 
     })
@@ -44,13 +38,13 @@ router.route("/displaybook").get((req,res) =>{
 
     router.route("/updatebook/:id").put(async(req,res)=>{
         let bookingId = req.params.id;
-        const{username,nic,email,password} =req.body;
+        const{name,contact_no,handover_date,return_date} =req.body;
 
         const updateBooking = {
-            username,
-            nic,
-            email,
-            password
+            name,
+            contact_no,
+            handover_date,
+            return_date
         }
         const update = await Booking.findByIdAndUpdate(bookingId,updateBooking)
         .then(()=>{

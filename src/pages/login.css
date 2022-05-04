@@ -234,6 +234,15 @@ body{
 	color: rgb(21, 20, 20);
 
 }
+
+.bx{
+	background-image: url("../images/carpro.jpg");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+}
+
 .create{
 	width: 48%;
 	height: 65%;
@@ -246,6 +255,39 @@ body{
 	font-size: 22px;
     
 }
+
+.createpro{
+	width: 30%;
+	height: 45%;
+	background-color: #1d71bf;
+	opacity: 0.8;
+	margin-left: 23%;
+	font-size: 22px;
+    
+}
+.inputpro{
+	width: 2px;
+	height: 3px;
+}
+.labelpro{
+	text-align: left;
+	color: #000;
+	margin-left: 5%;
+}
+.submitpro{
+	width: 94px;
+	height: 50px;
+	margin-left: 22%;
+	background-color: #1e2b42;
+	color: #bcc0c8;
+	cursor: pointer;
+}
+
+.submitpro:hover {
+	opacity:1;
+	color: #23a2f6;
+  }
+
 .label{
 	color: #000;
 	margin-left: 23%;

@@ -14,25 +14,13 @@ const BookingSchema = new Schema({
         required: true,
                 
     },
-    email: {
-        type:String,
-        required: true,
-        
-    },
-    handover_location: {
-        type:String,
-        required: true
-    },
-   
+      
     handover_date: {
         type:String,
         required: true
     },
    
-    handover_time: {
-        type:String,
-        required: true
-    },
+   
 
     return_date: {
         type:String,

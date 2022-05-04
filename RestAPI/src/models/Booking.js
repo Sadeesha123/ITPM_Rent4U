@@ -1,19 +1,21 @@
-const mongoose = require('mongoose');
+const number = require('@hapi/joi/lib/types/number');
+const mongoose =require('mongoose');
 
-const Schema = mongoose.Schema;
+const bookingSchema = new mongoose.Schema({
 
-const BookingSchema = new Schema({
-
-    name: {
+    brand:{
         type:String,
-        required: true
-        
+        min:6,
+        max:100,
+        required:true
     },
-    contact_no: {
+    vehicle:{
         type:String,
-        required: true,
-                
+        min:6,
+        max:100,
+        required:true
     },
+
       
     handover_date: {
         type:String,
@@ -24,13 +26,33 @@ const BookingSchema = new Schema({
 
     return_date: {
         type:String,
-        required: true
+ 
+    user:{
+        type:String,
+        min:6,
+        max:30,
+        required:true
+    },
+    contact:{
+     type:String,
+     min:10,
+     max:10,
+     required:true
+    },
+    handoverDate:{
+       type:String,
+       required:true
+    },
+    returnDate:{
+        type:String,
+        required:true
+    },
+    bookingDate:{
+        type:Date,
+        default:Date.now()
+
     },
    
-   
-   
-}) 
+})
 
-const Booking =  mongoose.model('Booking', BookingSchema);
-
-module.exports = Booking;
+module.exports = mongoose.model('Booking',bookingSchema);

@@ -14,11 +14,11 @@ function Navbar(){
         <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/" >Home</NavLink>
         <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/carlist" >CarList</NavLink>
         <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/gallary" >Gallary</NavLink>
-        <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/Lprofile" >Book</NavLink>
+        <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/aboutus" >AboutUs</NavLink>
         <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/admin" >Admin</NavLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/Login" ><button className='lb'> Login </button>  </NavLink>
-        <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/Register" ><button className='lb'>SignUp</button></NavLink>
-      
+        <NavLink className={({ isActive }) => "link" + (isActive ? " active" : "")} to="/aboutus" ><button className='lb'>SignUp</button></NavLink>
+
         
         </div>
 

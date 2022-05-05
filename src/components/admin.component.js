@@ -39,7 +39,7 @@ const handleLogin = (e) => {
                 if(data.role === "admin"){
                     alert('Admin login Success!')
                     navigate('/admin-dashboard');
-                      
+
                 }
                 
                

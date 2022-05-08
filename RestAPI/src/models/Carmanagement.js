@@ -32,6 +32,10 @@ const carManagementSchema = new mongoose.Schema({
         type:String,
         required: true
     },
+    pic:{
+        type:String,
+        default:""
+    }
 }) 
 
 const CarManagement = new mongoose.model('Carmanagement', carManagementSchema);

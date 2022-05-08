@@ -1,16 +1,21 @@
-const mongoose = require("mongoose")
+const mongoose  = require("mongoose")
+const dotenv = require('dotenv').config()
+require('dotenv').config()
 
-mongoose.connect("mongodb+srv://nuha:Mongo123@crud.fezih.mongodb.net/Rent4U")
+const db = process.env.MONGO_URL
 
+const connectDB = async () => {
+    try {
+        await mongoose.connect(db, {
+            useNewUrlParser: true, 
+            useUnifiedTopology: true
+        });
+        console.log("Connected to MongoDB")
+    } catch (err) {
+        console.error(err.message)
+        process.exit(1)
+    }
+}
 
-.then(()=>{
-    console.log("connection is setup successfully...")
-}).catch((err)=>{
-    console.log("connection not setup")
-    console.log(err)
-
-})
-
- 
-
+module.exports = connectDB
 

@@ -34,7 +34,7 @@ export default function User_Bookings(){
     
     return_date
    }
-   axios.post("http://localhost:8000/book",newBooking).then(()=>{
+   axios.post("http://localhost:5000/book",newBooking).then(()=>{
      alert("Added")
    }).catch((err)=>{
      alert("Please check the feilds and enter data accurately")

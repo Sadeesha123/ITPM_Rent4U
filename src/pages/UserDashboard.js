@@ -30,7 +30,7 @@ function UserDashboard() {
     { `.sidebar {display:none}` }
 </style>
 
-        <Link to="/ViewUserProfile">	<button className="button1">Profile</button> </Link><br/> 
+         
         <Link to="/ViewBookings">	<button className="button1">ViewBookings</button> </Link><br/> 
         
 

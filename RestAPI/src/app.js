@@ -39,7 +39,7 @@ connectDB()
 
 //Admin Route middlewares
 app.use('/api/user',authRoute)
-app.use('/api/booking',bookingRoute)
+//app.use('/api/booking',bookingRoute)
 
 
 app.listen(port,() =>{

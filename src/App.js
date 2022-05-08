@@ -11,12 +11,11 @@ import Navbar from './components/Navbar';
 import Homepage from './pages/Homepage';
 import Slider from './pages/Slider';
 import Login from './pages/Login';
-
 import Register from './pages/Register';
 import Homore from './pages/Homore';
-import Lprofile from './pages/Lprofile';
-import UserDashboard from './pages/UserDashboard';
-import ViewBookings from './pages/ViewBookings';
+import SignUp from './pages/SignUp';
+
+
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -64,16 +63,17 @@ function App() {
     <Route path="/carlist" element={<CarList/>}/>
     <Route path="/aboutus" element={<AboutUs/>}/>
     <Route path="/gallary" element={<Gallary/>}/>
-    <Route path="/admin" element={<Admin/>}/>  
-    <Route path="/Lprofile" element={<Lprofile/>}/>
-    <Route path="/UserDashboard" element={<UserDashboard/>}/>  
+    <Route path="/admin" element={<Admin/>}/>
+    <Route path="/admin" element={<Admin/>}/>
+    <Route path="/signup" element={<SignUp />} />
+     
     <Route path="/Login" element={<Login/>}/>
     <Route path="/User_Bookings" element={<User_Bookings/>}/>
-    <Route path="/ViewBookings" element={<ViewBookings/>}/>
+   
     <Route path="/Register" element={<Register/>}/>
     
 
-    <Route path="/Login" element={<Login/>}/>
+    <Route path="/login" element={<Login />}  exact />
 
 
    </Routes>
@@ -90,7 +90,7 @@ function App() {
      <Route path="/confirmed-bookings" element={<ConfirmedBookings />}/>
      <Route path="/new-bookings" element={<NewBookings />}/>
      <Route path="/car-management" element={<CarManagement />}/>
-
+    
      
   </Routes>
   </SideBar> 

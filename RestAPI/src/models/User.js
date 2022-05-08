@@ -26,7 +26,10 @@ const UserSchema = new Schema({
     },
    
    
+   
 }) 
+
+
 // encrypt user password
 
 UserSchema.pre("save", async function (next) {

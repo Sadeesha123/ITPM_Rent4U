@@ -40,9 +40,9 @@ const AdminBookings = () => {
            
            alert(data)
              
-            
-            
-         },
+        },
+
+        
          (error) => {
              const resMessage =
                  (error.response &&

@@ -4,6 +4,7 @@ import './AdminBooking.css';
 function BookingDetails({ formData, setFormData }) {
   return (
     <div className="booking-container">
+      <label>Handover Date:</label>
       <input
         type="date"
         placeholder="Handover Date"
@@ -12,8 +13,9 @@ function BookingDetails({ formData, setFormData }) {
           setFormData({ ...formData, handoverDate: e.target.value });
         }}
       />
+
+    <label>Return Date:</label>
       <input
-        
         type="date"
         placeholder="Return Date"
         value={formData.returnDate}

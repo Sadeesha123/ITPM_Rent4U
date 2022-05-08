@@ -143,10 +143,9 @@ const CarManagement = () => {
 
       <div className="row">
         <div className="mt-5 mb-4">
-          <Button variant="primary" onClick={handleShow}>
-            <i className="fa fa-plu"></i>
-            Add New Car
-          </Button>
+        <Button variant="primary" onClick={handleShow}>Add</Button>
+
+          
         </div>
       </div>
       <div className="row">
@@ -172,7 +171,7 @@ const CarManagement = () => {
             </thead>
             <tbody>
               {Data.map((item) => (
-                <tr key={item._id}>
+                <tr key={item._id} style={{ height:5 }}>
                   <td style={{ fontSize: 15 }}>{item.title}</td>
                   <td style={{ fontSize: 15 }}>{item.email}</td>
                   <td style={{ fontSize: 15 }}>{item.brand}</td>
@@ -216,6 +215,7 @@ const CarManagement = () => {
           <Modal.Body>
             <div>
               <div className="form-group">
+              <label>Title :</label><br></br>
                 <input
                   type="text"
                   className="form-control"
@@ -224,6 +224,7 @@ const CarManagement = () => {
                 />
               </div>
               <div className="form-group mt-3">
+              <label>Email :</label><br></br>
                 <input
                   type="email"
                   className="form-control"
@@ -233,6 +234,7 @@ const CarManagement = () => {
                 />
               </div>
               <div className="form-group mt-3">
+              <label>Brand :</label><br></br>
                 <input
                   type="text"
                   className="form-control"
@@ -242,6 +244,7 @@ const CarManagement = () => {
                 />
               </div>
               <div className="form-group mt-3">
+              <label>Price :</label><br></br>
                 <input
                   type="text"
                   className="form-control"
@@ -251,6 +254,7 @@ const CarManagement = () => {
                 />
               </div>
               <div className="form-group mt-3">
+              <label>Fuel :</label><br></br>
                 <input
                   type="text"
                   className="form-control"
@@ -260,6 +264,7 @@ const CarManagement = () => {
                 />
               </div>
               <div className="form-group mt-3">
+              <label>Modal :</label><br></br>
                 <input
                   type="text"
                   className="form-control"

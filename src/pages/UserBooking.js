@@ -161,38 +161,6 @@ const UserBooking = () => {
 
    
 
-      {bookings.map((booking) => (
-        <Card style={{ width: "18rem" }} key={booking._id}>
-          {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-          <Card.Body>
-            <Card.Title>Name{booking.name}</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">Contact-No
-              {booking.contact_no}
-            </Card.Subtitle>
-            <Card.Subtitle className="mb-2 text-muted" type="date" >Handover Date
-              {booking.handover_date}
-            </Card.Subtitle>
-            <Card.Subtitle className="mb-2 text-muted" type="date"> Handover Date
-              {booking.return_date} 
-            </Card.Subtitle>
-            <Button
-              size="sm"
-              variant="primary"
-              onClick={() => {
-                handleShow(SetRowData(booking));
-              }}
-            >
-              Edit
-            </Button>
-            &nbsp; &nbsp;
-            <Button variant="danger" onClick={() => deleteHandler(booking._id)}>
-              Delete
-            </Button>
-          </Card.Body>
-        </Card>
-      ))}
-
-
       {/* Edit Booking Modal  */}
 
       <Modal show={show} onHide={handleClose}>

@@ -9,8 +9,11 @@
 
 
 .bodyb {
-  background-image: url("../images/back1.jpg");
-  background-size: cover;
+  background-image: url("../images/aboutus.jpg");
+  background-size:cover;
+background-position: center;
+background-repeat:no-repeat;
+
   display: flex;
   justify-content: center;
   align-items: center;

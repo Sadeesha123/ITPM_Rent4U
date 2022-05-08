@@ -1,19 +1,33 @@
+import React from 'react'
+import axios from 'axios'
+import useEffect from 'react'
+
 const ConfirmedBookings = () => {
-    return <div className="title"> 
-    
-    
-       <style type="text/css" >
-    { `.navlink {display:none}` }
-</style>
-<style type="text/css" >
-    { `.navbar {display:none}` }
-</style>
-<style type="text/css" >
-    { `.navbar1 {display:none}` }
-</style>
+    // const getBookingData = () => {
+    //     const url = 'http://localhost:5000/newbooking'
+    //     axios.get(url)
+    //     .then(response => {
+    //         console.log(response)
+    //     })
+    // }
 
+    // useEffect(()=>{
+    //     getBookingData();
+    // },[])
 
-</div>;
-  };
-  
-  export default ConfirmedBookings;
+    const url = 'http://localhost:5000/newbooking'
+
+    const getBookings = () => {
+        axios.get(url)
+        .then((response) => {
+            console.log(response)
+        })
+    }
+  return (
+    <div>Data</div>
+    
+  )
+}
+
+export default ConfirmedBookings
+

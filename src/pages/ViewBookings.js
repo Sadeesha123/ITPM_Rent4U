@@ -1,40 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
+export default function ViewBookings() {
 
-
-
-
-
-
-function ViewBookings() {
+  const[bookings,setBookings]=useState([]);
 	
-  
+  useEffect(()=> {
+    function getBookings(){
+      axios.get("http://localhost:5000/displaybook").then((res) => {
+        setBookings(res.data);
+      }).catch((err)=>{
+        alert(err.message)
+      })
+    }
+    getBookings();
+
+  },[])
 	
 	  
   
 	return (
 
 	  <div>
-	
-	<body className="zt">
+	<h1>All Bookings</h1>
 
-    <style type="text/css" >
-    { `.main-container {display:none}` }
-</style>
-<style type="text/css" >
-    { `.sidebar {display:none}` }
-</style>
-   
-    
-
-        
-
-	</body>
 	  </div>
-	);
+	)
   }
   
-  export default ViewBookings;
   

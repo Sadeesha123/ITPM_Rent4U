@@ -37,6 +37,7 @@ body{
 	font-size: 29px;
 	font-style: italic;
 	font-weight: 700;
+	text-align: center;
 	font-style: calc(2px);
 }
 
@@ -112,13 +113,9 @@ body{
 	display:block;
 }
 
-.group .label1,
- .group .input,
- .group .button{
-	width:60%;
-	color:rgb(21, 19, 19);
-	display:block;
-	margin-left: 18%;
+.label1{
+	width: 2%;
+	margin-left: 30%;
 }
 
  .group .input,
@@ -253,7 +250,7 @@ body{
 	background-color: #fb9701;
 	margin-left: 23%;
 	opacity: 0.85;
-	color: rgb(248, 37, 4);
+	color: rgb(29, 42, 61);
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	text-align: center;
 	font-size: 22px;
@@ -295,21 +292,24 @@ body{
 
 .label{
 	color: #000;
-	margin-left: 23%;
+	margin-right: 12%;
+	text-align: center;
 }
 .h0{
-	font-size: larger;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	font-weight: 800;
+
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 60px;
+	text-align: center;
 	font-style: oblique;
-	margin-left: 36%;
+	margin-left: 2%;
 }
 .ho{
 	font-size: larger;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	font-weight: 800;
+	text-align: center;
 	font-style: oblique;
-	margin-left: 22%;
+	margin-left: 2%;
 }
 .field{
 	margin-left: 13%;
@@ -417,8 +417,21 @@ a {
   font-size: 20px;
   }
 
-
-
+.logincon{
+	margin-left: 56%;
+	
+	opacity: 0.8;
+	width: 34%;
+	
+}
+.btn{
+background-color: #1e2b42;
+color: #000;
+margin-left: 42%;
+}
+.xx{
+	margin-left: 14%;
+}
     
     
 

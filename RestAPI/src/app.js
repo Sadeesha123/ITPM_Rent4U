@@ -8,6 +8,7 @@ const CarmanagementRoute = require("./Routers/CarmanagementRoute")
 const UserRoute = require("./Routers/UserRoute.js");
 const authRoute = require('./Routers/auth')
 const bookingRoute =require('./Routers/booking');
+const BookingRoute = require("./Routers/BookingRoute.js");
 
 dotenv.config()
 
@@ -15,6 +16,7 @@ app.use(express.json())
 app.use(cors())
 app.use(CarmanagementRoute)
 app.use("/User",UserRoute);
+app.use(BookingRoute)
 
 app.get('/CarManagement', (req, res) => {
     res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
